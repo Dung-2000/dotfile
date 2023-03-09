@@ -11,7 +11,7 @@ require("mason").setup({
 require("mason-lspconfig").setup({
   -- 确保安装，根据需要填写
   ensure_installed = {
-    "lua_ls",
+    "lua_ls", "gopls", "clangd"--, "pyright"
   },
 })
 
@@ -19,4 +19,12 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require("lspconfig").lua_ls.setup {
   capabilities = capabilities,
+}
+
+require("lspconfig").gopls.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+}
+require("lspconfig").clangd.setup {
+    capabilities = capabilities
 }

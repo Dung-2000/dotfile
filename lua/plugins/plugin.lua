@@ -11,6 +11,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  -- theme --
+  use 'folke/tokyonight.nvim'
   -- telescope --
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -39,16 +41,22 @@ return require('packer').startup(function(use)
   }
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-vsnip"
+  use "hrsh7th/cmp-buffer"
+-- --snip---------
   use "L3mon4D3/LuaSnip"
   use "saadparwaiz1/cmp_luasnip"
   use "rafamadriz/friendly-snippets"
-  use "hrsh7th/cmp-path"
+  use "SirVer/ultisnips"
+  
   use "numToStr/Comment.nvim"
   use "windwp/nvim-autopairs"
   use "akinsho/bufferline.nvim"
   use "lewis6991/gitsigns.nvim"
---  use {
- --   'nvim-telescope/telescope.nvim', tag = '0.1.1',
-   -- requires = { {'nvim-lua/plenary.nvim'} }
-  --}
+  use "voldikss/vim-floaterm"
+  
+  use "ray-x/go.nvim"
+  use "ray-x/guihua.lua"
+  use "fatih/vim-go"
 end)

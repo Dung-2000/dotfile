@@ -63,6 +63,7 @@ cmp.setup({
   -- 这里重要
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    { name = 'vsnip' },
     { name = 'luasnip' },
     { name = 'path' },
   }, {
